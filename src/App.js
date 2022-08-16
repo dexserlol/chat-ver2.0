@@ -12,7 +12,7 @@ function App() {
 
   useEffect(()=>{
       let timerID = setTimeout(() => {
-            fetch(`http://127.0.0.1:3001/getmes`)
+            fetch(`https://react-chat-backend-dexser.herokuapp.com/getmes`)
             .then((res)=>{
               return res.json()
             })
@@ -27,7 +27,7 @@ function App() {
     setMes(e.target.value)
   }
   function Submit(e){
-    fetch(`http://127.0.0.1:3001/mes?username=${user.username}&text=${mes}`)
+    fetch(`https://react-chat-backend-dexser.herokuapp.com/mes?username=${user.username}&text=${mes}`)
     setMes("")
     e.preventDefault()
   }

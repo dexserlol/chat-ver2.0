@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 function Message(props) {
     function Delete(el) {
@@ -6,7 +6,7 @@ function Message(props) {
         el.preventDefault()
     }
     let Arr=props.test.map((el)=>{
-        return <li key={el.id} >{`${el.username}: ${el.text}  `}<a id={el.id} href="" onClick={Delete}>remove</a></li>
+        return <li key={el.id} >{`${el.username}: ${el.text}  `}<a id={el.id} href="#" onClick={Delete}>remove</a></li>
     })
     return (
         <ul>

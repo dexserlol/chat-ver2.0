@@ -12,7 +12,7 @@ function Autorization(props) {
         setPass(e.target.value)
     }
     function register(e){
-        fetch(`https://react-chat-backend-dexser.herokuapp.com/reg?username=${username}&password=${password}`)
+        fetch(`https://node-back-chat.herokuapp.com/reg?username=${username}&password=${password}`)
         .then((response) => {
             return response.json();
         })
@@ -23,7 +23,7 @@ function Autorization(props) {
         setPass("")
     }
     function loginned(e){
-        fetch(`https://react-chat-backend-dexser.herokuapp.com/log?username=${username}&password=${password}`)
+        fetch(`https://node-back-chat.herokuapp.com/log?username=${username}&password=${password}`)
         .catch(()=>{
             alert("test");
         })

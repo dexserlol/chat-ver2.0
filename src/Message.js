@@ -2,7 +2,7 @@ import React from 'react';
 
 function Message(props) {
     function Delete(el) {
-        fetch(`https://react-chat-backend-dexser.herokuapp.com/remove?id=${el.target.id}&username=${props.user.username}`)
+        fetch(`https://node-back-chat.herokuapp.com/remove?id=${el.target.id}&username=${props.user.username}`)
         el.preventDefault()
     }
     let Arr=props.test.map((el)=>{
